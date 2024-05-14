@@ -6,7 +6,18 @@ export abstract class Item {
         n = this.nome
         d = this.descricao
     }
-
+    getNome():string{
+        return this.nome
+    }
+    setNome(nmi:string){
+        this.nome = nmi
+    }
+    getDescricao():string{
+        return this.descricao
+    }
+    setDescricao(dc:string){
+        this.descricao = dc
+    }
     abstract aplicarBeneficios(Personagem):void;
     abstract removerBeneficios(Personagem):void;
 }
