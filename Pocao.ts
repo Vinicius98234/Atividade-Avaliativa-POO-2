@@ -1,10 +1,14 @@
 import { Item } from "./Item";
-
+import { Personagem } from "./Personagem";
+    
 export class Pocao extends Item{
-    aplicarBeneficios(personagem):void{
-        personagem.hp += personagem.hp * 0,5
-        personagem.mp += personagem.mp * 0,2   
+    constructor(nome: string, descricao: string) {
+        super(nome, descricao);
     }
-    removerBeneficios(personagem):void{}
+    aplicarBeneficios(personagem:Personagem):void{
+        const hpAumentado = personagem.getMaxHP(0.5)
+        const mpAumentado = personagem.getMaxMP(0.2)
+    }
+    removerBeneficios(personagem:Personagem):void{}
 
 }

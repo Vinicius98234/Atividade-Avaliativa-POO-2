@@ -15,18 +15,14 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Pocao = void 0;
-var Item_1 = require("./Item");
-var Pocao = /** @class */ (function (_super) {
-    __extends(Pocao, _super);
-    function Pocao(nome, descricao) {
-        return _super.call(this, nome, descricao) || this;
+exports.InventarioLimiteException = void 0;
+var InventarioLimiteException = /** @class */ (function (_super) {
+    __extends(InventarioLimiteException, _super);
+    function InventarioLimiteException(mensagem) {
+        var _this = _super.call(this, mensagem) || this;
+        _this.name = "InventarioLimiteException";
+        return _this;
     }
-    Pocao.prototype.aplicarBeneficios = function (personagem) {
-        var hpAumentado = personagem.getMaxHP(0.5);
-        var mpAumentado = personagem.getMaxMP(0.2);
-    };
-    Pocao.prototype.removerBeneficios = function (personagem) { };
-    return Pocao;
-}(Item_1.Item));
-exports.Pocao = Pocao;
+    return InventarioLimiteException;
+}(Error));
+exports.InventarioLimiteException = InventarioLimiteException;

@@ -5,8 +5,9 @@ export class ItemInventario{
     private item:Item;
 
     constructor(item:Item,quantidade:number){
-        this.item = item
         this.quantidade = quantidade
+        this.item = item
+        
     }
 
     getQuantidade(): number{

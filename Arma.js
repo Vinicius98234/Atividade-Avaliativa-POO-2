@@ -19,14 +19,16 @@ exports.Arma = void 0;
 var Item_1 = require("./Item");
 var Arma = /** @class */ (function (_super) {
     __extends(Arma, _super);
-    function Arma() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function Arma(nome, descricao) {
+        return _super.call(this, nome, descricao) || this;
     }
     Arma.prototype.aplicarBeneficios = function (personagem) {
-        personagem.forca += 10;
-        personagem.defesa += 5;
+        personagem.aumentarAtaque(10);
+        personagem.aumentarDefesa(5);
     };
     Arma.prototype.removerBeneficios = function (personagem) {
+        personagem.diminuirAtaque(10);
+        personagem.diminuirDefesa(5);
     };
     return Arma;
 }(Item_1.Item));

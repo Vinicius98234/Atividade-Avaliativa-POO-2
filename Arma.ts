@@ -1,11 +1,17 @@
 import { Item } from "./Item";
+import { Personagem } from "./Personagem";
 
 export class Arma extends Item{
-    aplicarBeneficios(personagem):void{
-        personagem.forca += 10;
-        personagem.defesa += 5;
+    constructor(nome:string, descricao:string){
+        super(nome,descricao)
     }
-    removerBeneficios(personagem):void{
+    aplicarBeneficios(personagem : Personagem):void{
+        personagem.aumentarAtaque(10);
+        personagem.aumentarDefesa(5);
+    }
+    removerBeneficios(personagem : Personagem):void{
+        personagem.diminuirAtaque(10);
+        personagem.diminuirDefesa(5);
 
     }
 

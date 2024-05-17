@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ItemInventario = void 0;
 var ItemInventario = /** @class */ (function () {
-    function ItemInventario() {
+    function ItemInventario(item, quantidade) {
+        this.quantidade = quantidade;
+        this.item = item;
     }
     ItemInventario.prototype.getQuantidade = function () {
         return this.quantidade;

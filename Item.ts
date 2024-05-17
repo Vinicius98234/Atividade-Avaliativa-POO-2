@@ -1,10 +1,12 @@
+import { Personagem } from "./Personagem";
+
 export abstract class Item {
     protected nome:string;
     protected descricao:string;
 
     constructor(n:string, d:string){
-        n = this.nome
-        d = this.descricao
+        this.nome = n
+        this.descricao = d
     }
     getNome():string{
         return this.nome
@@ -18,6 +20,6 @@ export abstract class Item {
     setDescricao(dc:string){
         this.descricao = dc
     }
-    abstract aplicarBeneficios(Personagem):void;
-    abstract removerBeneficios(Personagem):void;
+    abstract aplicarBeneficios(personagem :Personagem):void;
+    abstract removerBeneficios(personagem :Personagem):void;
 }
