@@ -63,7 +63,6 @@ export class Jogar {
    
     private adicionarArmaAoInventario() {
         const entrada = require('prompt-sync')();
-    
         const nomeArma = entrada('Digite o nome da arma: ');
         const descricaoArma = entrada('Digite a descrição da arma: ');
         const quantidade = parseInt(entrada('Digite a quantidade de armas: '));
@@ -79,7 +78,6 @@ export class Jogar {
     
     private adicionarPocaoAoInventario() {
         const entrada = require('prompt-sync')();
-    
         const nomePocao = entrada('Digite o nome da poção: ');
         const descricaoPocao = entrada('Digite a descrição da poção: ');
         const quantidade = parseInt(entrada('Digite a quantidade de poções: '));

@@ -121,14 +121,13 @@ export class Personagem{
         console.log(`MP: ${this.mp}`);
         console.log(`Força: ${this.forca}`);
         console.log(`Defesa: ${this.defesa}`);
-        console.log(`Arma: ${this.arma ? this.arma.getNome : "Nenhuma"}`);
+        console.log(`Arma: ${this.arma ? this.arma.getNome() : "Nenhuma"}`);
         console.log(`Inventário: `)
         this.inventario.getItemInventario().forEach((item,index) => {
             console.log(`${index + 1} - ${item.getItem().getNome()} (${item.getQuantidade()})`)
         })
         console.log(`Total de itens: ${this.inventario.getQuantidadeTotal()}`)
         console.log(`Limite de itens no inventário: ${this.inventario.getquantmaxitens()}`)
-    
     }
 
     desequiparArma(): void {

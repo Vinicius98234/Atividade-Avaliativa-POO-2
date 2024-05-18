@@ -19,7 +19,8 @@ export class Menu {
 
     imprimirMenu(): string {
         console.log("Opções do Menu:");
-        this.itensMenu.forEach(item => {console.log(`${item.getOpcao()}: ${item.getTextoOpcao()}`);
+        this.itensMenu.forEach(item => {console.log(`${item.getOpcao()}: ${item.getTextoOpcao(
+        )}`);
         });
 
         

@@ -104,7 +104,7 @@ var Personagem = /** @class */ (function () {
         console.log("MP: ".concat(this.mp));
         console.log("For\u00E7a: ".concat(this.forca));
         console.log("Defesa: ".concat(this.defesa));
-        console.log("Arma: ".concat(this.arma ? this.arma.getNome : "Nenhuma"));
+        console.log("Arma: ".concat(this.arma ? this.arma.getNome() : "Nenhuma"));
         console.log("Invent\u00E1rio: ");
         this.inventario.getItemInventario().forEach(function (item, index) {
             console.log("".concat(index + 1, " - ").concat(item.getItem().getNome(), " (").concat(item.getQuantidade(), ")"));
